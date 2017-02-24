@@ -14,7 +14,7 @@ class Agency extends React.Component {
     const {agencies} = this.props;
     return (
       <div className="jumbotron">
-        <h1>Agency page</h1>
+        <h1>Agency</h1>
         <AgencyPanel agencies={agencies}/>
       </div>
     )

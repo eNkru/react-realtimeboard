@@ -1,10 +1,11 @@
 import React from 'react';
+import AgencyCard from './AgencyCard';
 
 const AgencyPanel = ({agencies}) => {
   return (
-    <div>
+    <div className="row">
       {agencies.map((agency) => {
-        return <div key={agency.agency_id}>{agency.agency_name} {agency.agency_phone}</div>
+        return <AgencyCard key={agency.agency_id} agency={agency}/>
       })}
     </div>
   );
