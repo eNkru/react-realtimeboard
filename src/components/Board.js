@@ -4,7 +4,7 @@ const Board = ({boards}) => {
   return (
     <div>
       {boards.map((board, index) => {
-        return <div key={index}>{board.stopNumber}</div>
+        return <div key={index}>{board.stopNumber}</div>;
       })}
     </div>
   );

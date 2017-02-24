@@ -17,19 +17,19 @@ class Agency extends React.Component {
         <h1>Agency</h1>
         <AgencyPanel agencies={agencies}/>
       </div>
-    )
+    );
   }
 }
 
 Agency.propTypes = {
   actions: PropTypes.object.isRequired,
   agencies: PropTypes.array.isRequired
-}
+};
 
 function mapStateToProps(state) {
   return {
     agencies: state.agencies
-  }
+  };
 }
 
 function mapDispatchToProps(dispatch) {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 
 const AgencyCard = ({agency}) => {
   const {agency_id, agency_name, agency_phone} = agency;
@@ -15,6 +15,10 @@ const AgencyCard = ({agency}) => {
       </div>
     </div>
   );
-}
+};
+
+AgencyCard.propTypes = {
+  agency: PropTypes.object.isRequired
+};
 
 export default AgencyCard;
