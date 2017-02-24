@@ -4,8 +4,9 @@ class About extends React.Component {
   render() {
     return (
       <div>
-        <h1>About Page</h1>
-
+        <h1>What this application about</h1>
+        <p>The purpose of this application is to learn React | Redux for myself.</p>
+        <p>Please let me know any feedback via <a href="http://enkru.github.io">http://enkru.github.io</a></p>
       </div>
     );
   }
