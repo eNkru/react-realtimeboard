@@ -3,7 +3,7 @@ import React, {PropTypes} from 'react';
 const AgencyCard = ({agency}) => {
   const {agency_id, agency_name, agency_phone} = agency;
   return (
-    <div className="col-xs-6 col-md-4">
+    <div className="col-xs-12 col-md-4">
       <div className="thumbnail">
         <div className="caption">
           <h3>{agency_name}</h3>
