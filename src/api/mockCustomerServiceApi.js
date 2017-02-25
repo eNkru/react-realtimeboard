@@ -118,7 +118,7 @@ class CustomerServiceApi {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(Object.assign([], customerServices));
-      }, delay)
+      }, delay);
     });
   }
 }
