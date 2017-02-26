@@ -1,15 +1,32 @@
 import React from 'react';
-import {Link, IndexLink} from 'react-router';
+import {Navbar, Nav, NavItem} from 'react-bootstrap';
+import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap';
 
 const Header = () => {
   return (
-    <nav>
-      <IndexLink to="/" activeClassName="active">Home</IndexLink>
-      {" | "}
-      <Link to="/agency" activeClassName="active">Agencies</Link>
-      {" | "}
-      <Link to="/about" activeClassName="active">About</Link>
-    </nav>
+    <Navbar inverse collapseOnSelect>
+      <Navbar.Header>
+        <Navbar.Brand>
+          <a href="#">Auckland Transport</a>
+        </Navbar.Brand>
+        <Navbar.Toggle />
+      </Navbar.Header>
+      <Navbar.Collapse>
+        <Nav>
+          <IndexLinkContainer to="/">
+            <NavItem>Home</NavItem>
+          </IndexLinkContainer>
+          <LinkContainer to="/agency">
+            <NavItem>Agencies</NavItem>
+          </LinkContainer>
+        </Nav>
+        <Nav pullRight>
+          <LinkContainer to="/about">
+            <NavItem>About</NavItem>
+          </LinkContainer>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 
