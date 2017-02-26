@@ -7,7 +7,7 @@ const Header = () => {
     <Navbar inverse collapseOnSelect>
       <Navbar.Header>
         <Navbar.Brand>
-          <a href="#">Auckland Transport</a>
+          Auckland Transport
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
