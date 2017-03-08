@@ -2,12 +2,9 @@ import React, {Component, PropTypes} from "react";
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as csrActions from '../actions/csrActions';
+import CSRPanel from './CSRPanel';
 
 class CustomerService extends Component {
-  constructor(props, context) {
-    super(props, context);
-    this.state = {};
-  }
 
   componentDidMount() {
     this.props.actions.getAllCsrs();
@@ -15,8 +12,11 @@ class CustomerService extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Component!</h1>
+      <div className="jumbotron">
+        <h1>Customer Services</h1>
+        {this.props.csrs.map((csr) => {
+          return <CSRPanel key={csr.id} csr={csr}/>
+        })}
       </div>
     );
   }
