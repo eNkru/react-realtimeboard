@@ -15,7 +15,7 @@ class CustomerService extends Component {
       <div className="jumbotron">
         <h1>Customer Services</h1>
         {this.props.csrs.map((csr) => {
-          return <CSRPanel key={csr.id} csr={csr}/>
+          return <CSRPanel key={csr.id} csr={csr}/>;
         })}
       </div>
     );
