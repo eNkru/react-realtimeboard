@@ -15,10 +15,9 @@ class CustomerService extends Component {
     return (
       <Container>
         <Header as="h2" attached="top">
-          Customer Serivces
+          Customer Services
         </Header>
         <Segment raised stacked attached>
-          <h1>Customer Services</h1>
           {this.props.csrs.map((csr) => {
             return <CSRPanel key={csr.id} csr={csr}/>;
           })}
