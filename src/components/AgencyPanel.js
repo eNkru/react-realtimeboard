@@ -1,13 +1,14 @@
 import React, {PropTypes} from 'react';
 import AgencyCard from './AgencyCard';
+import {Grid} from 'semantic-ui-react';
 
 const AgencyPanel = ({agencies}) => {
   return (
-    <div className="row">
+    <Grid stackable columns={3}>
       {agencies.map((agency) => {
         return <AgencyCard key={agency.agency_id} agency={agency}/>;
       })}
-    </div>
+    </Grid>
   );
 };
 
