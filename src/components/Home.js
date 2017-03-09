@@ -36,7 +36,7 @@ class Home extends React.Component {
         </Header>
         <Segment raised stacked attached>
           <Input icon="window maximize" iconPosition="left" placeholder="Enter stop number" onChange={this.onStopChange}/>
-          <span> </span>
+          
           <Button primary type="submit" onClick={this.onClickAdd}>Add!</Button>
           <Board boards={boards}/>
         </Segment>
