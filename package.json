@@ -33,17 +33,16 @@
   "author": "Howard Ju",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "3.3.7",
     "object-assign": "4.1.0",
     "react": "15.4.1",
-    "react-bootstrap": "0.30.7",
     "react-dom": "15.4.1",
     "react-redux": "5.0.1",
     "react-router": "3.0.0",
-    "react-router-bootstrap": "0.23.1",
     "react-router-redux": "4.0.7",
     "redux": "3.6.0",
-    "redux-thunk": "2.1.0"
+    "redux-thunk": "2.1.0",
+    "semantic-ui-css": "2.2.9",
+    "semantic-ui-react": "0.67.0"
   },
   "devDependencies": {
     "autoprefixer": "6.5.4",

@@ -1,19 +1,19 @@
 import React, {PropTypes} from 'react';
+import {Grid, Card, Icon} from 'semantic-ui-react';
 
 const AgencyCard = ({agency}) => {
   const {agency_id, agency_name, agency_phone} = agency;
   return (
-    <div className="col-xs-12 col-md-4">
-      <div className="thumbnail">
-        <div className="caption">
-          <h3>{agency_name}</h3>
-          <p>Phone: {agency_phone}</p>
-          <p>
-            <a href="#" className="btn btn-primary" role="button">{agency_id}</a>
-          </p>
-        </div>
-      </div>
-    </div>
+    <Grid.Column>
+      <Card>
+        <Card.Content header={agency_id}/>
+        <Card.Content description={agency_name}/>
+        <Card.Content extra>
+          <Icon name="phone"/>
+          {agency_phone}
+        </Card.Content>
+      </Card>
+    </Grid.Column>
   );
 };
 

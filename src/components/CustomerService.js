@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as csrActions from '../actions/csrActions';
 import CSRPanel from './CSRPanel';
+import {Segment, Container, Header} from 'semantic-ui-react';
 
 class CustomerService extends Component {
 
@@ -12,12 +13,17 @@ class CustomerService extends Component {
 
   render() {
     return (
-      <div className="jumbotron">
-        <h1>Customer Services</h1>
-        {this.props.csrs.map((csr) => {
-          return <CSRPanel key={csr.id} csr={csr}/>;
-        })}
-      </div>
+      <Container>
+        <Header as="h2" attached="top">
+          Customer Serivces
+        </Header>
+        <Segment raised stacked attached>
+          <h1>Customer Services</h1>
+          {this.props.csrs.map((csr) => {
+            return <CSRPanel key={csr.id} csr={csr}/>;
+          })}
+        </Segment>
+      </Container>
     );
   }
 }

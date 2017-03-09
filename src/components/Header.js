@@ -1,36 +1,33 @@
 import React from 'react';
-import {Navbar, Nav, NavItem} from 'react-bootstrap';
-import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap';
+import { Menu } from 'semantic-ui-react';
+import { Link } from 'react-router';
 
-const Header = () => {
-  return (
-    <Navbar inverse collapseOnSelect>
-      <Navbar.Header>
-        <Navbar.Brand>
-          Auckland Transport
-        </Navbar.Brand>
-        <Navbar.Toggle />
-      </Navbar.Header>
-      <Navbar.Collapse>
-        <Nav>
-          <IndexLinkContainer to="/">
-            <NavItem>Home</NavItem>
-          </IndexLinkContainer>
-          <LinkContainer to="/csr">
-            <NavItem>CSRs</NavItem>
-          </LinkContainer>
-          <LinkContainer to="/agency">
-            <NavItem>Agencies</NavItem>
-          </LinkContainer>
-        </Nav>
-        <Nav pullRight>
-          <LinkContainer to="/about">
-            <NavItem>About</NavItem>
-          </LinkContainer>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
-  );
-};
+class Header extends React.Component {
+
+  constructor(props, context) {
+    super(props, context);
+    this.state = {activeItem: 'home'};
+    this.handleItemClick = this.handleItemClick.bind(this);
+  }
+
+  handleItemClick(event, {name}) {
+    this.setState({activeItem: name});
+  }
+
+  render() {
+    const {activeItem} = this.state;
+
+    return (
+      <Menu pointing secondary stackable>
+        <Menu.Item as={Link} to="/" name="home" active={activeItem === 'home'} onClick={this.handleItemClick}/>
+        <Menu.Item as={Link} to="/csr" name="csr" active={activeItem === 'csr'} onClick={this.handleItemClick}/>
+        <Menu.Item as={Link} to="/agency" name="agency" active={activeItem === 'agency'} onClick={this.handleItemClick}/>
+        <Menu.Menu position="right">
+          <Menu.Item as={Link} to="/about" name="about" active={activeItem === 'about'} onClick={this.handleItemClick}/>
+        </Menu.Menu>
+      </Menu>
+    );
+  }
+}
 
 export default Header;

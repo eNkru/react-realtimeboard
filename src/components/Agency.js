@@ -3,6 +3,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as agenciesActions from '../actions/agenciesActions';
 import AgencyPanel from './AgencyPanel';
+import {Segment, Container, Header} from 'semantic-ui-react';
 
 class Agency extends React.Component {
 
@@ -13,10 +14,14 @@ class Agency extends React.Component {
   render() {
     const {agencies} = this.props;
     return (
-      <div className="jumbotron">
-        <h1>Agency</h1>
-        <AgencyPanel agencies={agencies}/>
-      </div>
+      <Container>
+        <Header as="h2" attached="top">
+          Available Agencies
+        </Header>
+        <Segment raised stacked attached>
+          <AgencyPanel agencies={agencies}/>
+        </Segment>
+      </Container>
     );
   }
 }
