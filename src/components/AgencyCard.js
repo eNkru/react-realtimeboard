@@ -5,7 +5,7 @@ const AgencyCard = ({agency}) => {
   const {agency_id, agency_name, agency_phone} = agency;
   return (
     <Grid.Column>
-      <Card>
+      <Card color="orange">
         <Card.Content header={agency_id}/>
         <Card.Content description={agency_name}/>
         <Card.Content extra>
