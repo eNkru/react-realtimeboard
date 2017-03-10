@@ -33,6 +33,7 @@
   "author": "Howard Ju",
   "license": "MIT",
   "dependencies": {
+    "google-map-react": "0.22.3",
     "object-assign": "4.1.0",
     "react": "15.4.1",
     "react-dom": "15.4.1",

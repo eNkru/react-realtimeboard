@@ -9,8 +9,8 @@ const customerServices = [
     "phone": "09 366 6400",
     "openHours": "Mon- Fri: 7am-6pm\nSat: 8am-4.30pm\nClosed Sunday",
     "hopServices": false,
-    "latitude": -36.869167,
-    "longitude": -36.869167
+    "latitude": -36.8692188,
+    "longitude": 174.7768141
   },
   {
     "id": "2",
@@ -20,8 +20,8 @@ const customerServices = [
     "phone": "09 366 6400",
     "openHours": "Mon – Fri: 8.30am-5pm\nClosed Saturday and Sunday",
     "hopServices": true,
-    "latitude": -36.852986,
-    "longitude": -36.852986
+    "latitude": -36.8532194,
+    "longitude": 174.7651301
   },
   {
     "id": "3",
@@ -31,19 +31,19 @@ const customerServices = [
     "phone": "09 366 6400",
     "openHours": "Mon-Fri: 7am-6pm\nSat: 8am-4:30pm\nClosed Sunday",
     "hopServices": false,
-    "latitude": -36.909257,
-    "longitude": -36.909257
+    "latitude": -36.9094439,
+    "longitude": 174.6823591
   },
   {
     "id": "4",
     "name": "Albany Customer Service Centre",
-    "address": "null Northern Busway, corner of Elliot Rose Ave and Cornerstone Drive.",
+    "address": "Northern Busway, corner of Elliot Rose Ave and Cornerstone Drive.",
     "suburb": "Albany",
     "phone": "09 366 6400",
     "openHours": "Monday to Friday: 6.30am - 7pm\nClosed for lunch 1:30pm - 2pm\nClosed Saturday and Sunday",
     "hopServices": true,
-    "latitude": -36.722553,
-    "longitude": -36.722553
+    "latitude": -36.722473,
+    "longitude": 174.7092774
   },
   {
     "id": "5",
@@ -53,8 +53,8 @@ const customerServices = [
     "phone": "09 366 6400",
     "openHours": "Mon-Fri: 7:30am-6pm\nClosed Saturday and Sunday",
     "hopServices": true,
-    "latitude": -37.063816,
-    "longitude": -37.063816
+    "latitude": -37.0644591,
+    "longitude": 174.9433928
   },
   {
     "id": "6",
@@ -64,8 +64,8 @@ const customerServices = [
     "phone": "09 4475401",
     "openHours": "Monday to Friday: 7am - 6pm\nSaturday: 8am - 4:30pm\nClosed Sunday",
     "hopServices": false,
-    "latitude": -36.932099,
-    "longitude": -36.932099
+    "latitude": -36.9326344,
+    "longitude": 174.9106499
   },
   {
     "id": "7",
@@ -75,8 +75,8 @@ const customerServices = [
     "phone": "09 366 6400",
     "openHours": "Mon-Fri: 7:30am-6pm \nClosed for lunch: 1pm-1:30pm\nClosed Saturday and Sunday\n",
     "hopServices": true,
-    "latitude": -36.750808,
-    "longitude": -36.750808
+    "latitude": -36.7509171,
+    "longitude": 174.7275003
   },
   {
     "id": "8",
@@ -86,8 +86,8 @@ const customerServices = [
     "phone": "09 366 6400",
     "openHours": "Mon – Fri: 7.00am-6pm\nSaturday: 8am-4:30pm\nClosed Sunday",
     "hopServices": true,
-    "latitude": -36.784258,
-    "longitude": -36.784258
+    "latitude": -36.7818534,
+    "longitude": 174.7513133
   },
   {
     "id": "9",
@@ -97,19 +97,19 @@ const customerServices = [
     "phone": "09 366 6400",
     "openHours": "Monday – Sat\n7:30am-8pm\nSun\n8:30am-5pm",
     "hopServices": false,
-    "latitude": -36.843891,
-    "longitude": -36.843891
+    "latitude": -36.8440934,
+    "longitude": 174.7652094
   },
   {
     "id": "10",
     "name": "Manukau Customer Service Centre",
-    "address": "null Ground Floor, MIT Building, 57 Manukau Station Rd, ",
+    "address": "Ground Floor, MIT Building, 57 Manukau Station Rd, ",
     "suburb": "Manukau",
     "phone": "09 366 6400",
     "openHours": "Mon - Fri: 7am - 6pm\nClosed Saturday and Sunday and Public Holidays\n ",
     "hopServices": true,
-    "latitude": -36.99365,
-    "longitude": -36.99365
+    "latitude": -36.9939561,
+    "longitude": 174.8750093
   }
 ];
 
