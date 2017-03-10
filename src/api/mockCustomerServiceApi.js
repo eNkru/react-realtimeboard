@@ -8,7 +8,7 @@ const customerServices = [
     "suburb": "Newmarket",
     "phone": "09 366 6400",
     "openHours": "Mon- Fri: 7am-6pm\nSat: 8am-4.30pm\nClosed Sunday",
-    "hopServices": true,
+    "hopServices": false,
     "latitude": -36.869167,
     "longitude": -36.869167
   },
@@ -30,7 +30,7 @@ const customerServices = [
     "suburb": "New Lynn",
     "phone": "09 366 6400",
     "openHours": "Mon-Fri: 7am-6pm\nSat: 8am-4:30pm\nClosed Sunday",
-    "hopServices": true,
+    "hopServices": false,
     "latitude": -36.909257,
     "longitude": -36.909257
   },
@@ -63,7 +63,7 @@ const customerServices = [
     "suburb": "Botany",
     "phone": "09 4475401",
     "openHours": "Monday to Friday: 7am - 6pm\nSaturday: 8am - 4:30pm\nClosed Sunday",
-    "hopServices": true,
+    "hopServices": false,
     "latitude": -36.932099,
     "longitude": -36.932099
   },
@@ -96,7 +96,7 @@ const customerServices = [
     "suburb": "CBD",
     "phone": "09 366 6400",
     "openHours": "Monday – Sat\n7:30am-8pm\nSun\n8:30am-5pm",
-    "hopServices": true,
+    "hopServices": false,
     "latitude": -36.843891,
     "longitude": -36.843891
   },
