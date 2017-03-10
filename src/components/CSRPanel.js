@@ -36,6 +36,9 @@ const CSRPanel = ({csr}) => {
           </Grid.Column>
           <Grid.Column width={10}>
             <GoogleMapReact
+              bootstrapURLKeys={{
+                key: "AIzaSyDAHj2LVnmfXnbK_hlG4BS5re4xiStVO6Q"
+              }}
               defaultCenter={{lat: csr.latitude, lng: csr.longitude}}
               defaultZoom={16}
               style={{height: '300px'}}>
