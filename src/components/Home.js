@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import * as boardActions from '../actions/boardActions';
 import {bindActionCreators} from 'redux';
 import Board from './Board';
+import {Segment, Input, Button, Header, Container} from 'semantic-ui-react';
 
 class Home extends React.Component {
   constructor(props, context) {
@@ -29,36 +30,35 @@ class Home extends React.Component {
   render() {
     const {boards} = this.props;
     return (
-      <div className="jumbotron">
-        <h1>Auckland Transport Realtime Board</h1>
-        <div className="input-group">
-          <span className="input-group-addon">Stop Number</span>
-          <input className="form-control" type="text" value={this.state.board.stopNumber} onChange={this.onStopChange}/>
-          <span className="input-group-btn">
-            <button className="btn btn-primary" type="submit" onClick={this.onClickAdd}>Add!</button>
-          </span>
-        </div>
-        <Board boards={boards}/>
-      </div>
+      <Container>
+        <Header as="h2" attached="top">
+          Auckland Transport Realtime Board
+        </Header>
+        <Segment raised stacked attached>
+          <Input icon="window maximize" iconPosition="left" placeholder="Enter stop number" onChange={this.onStopChange}/>
+          <Button primary type="submit" onClick={this.onClickAdd}>Add!</Button>
+          <Board boards={boards}/>
+        </Segment>
+      </Container>
     );
   }
-}
+  }
 
-Home.propTypes = {
-  actions: PropTypes.object.isRequired,
-  boards: PropTypes.array.isRequired
-};
+  Home.propTypes = {
+    actions: PropTypes.object.isRequired,
+    boards: PropTypes.array.isRequired
+  };
 
-function mapStateToProps(state) {
-  return {
+  function mapStateToProps(state) {
+    return {
     boards: state.boards
   };
-}
+  }
 
-function mapDispatchToProps(dispatch) {
-  return {
+  function mapDispatchToProps(dispatch) {
+    return {
     actions: bindActionCreators(boardActions, dispatch)
   };
-}
+  }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+  export default connect(mapStateToProps, mapDispatchToProps)(Home);
