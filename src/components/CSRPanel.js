@@ -13,7 +13,7 @@ const CSRPanel = ({csr}) => {
             <Item>
               <Item.Content>
                 <Item.Header as="a">{csr.name}</Item.Header>
-                <Label icon="marker" content={csr.suburb}/>
+                <Label attached="top right" icon="marker" content={csr.suburb}/>
                 <Divider/>
                 <Item.Description>
                   <List>
