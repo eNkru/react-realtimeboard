@@ -8,7 +8,9 @@ import {Segment, Container, Header} from 'semantic-ui-react';
 class CustomerService extends Component {
 
   componentWillMount() {
-    this.props.actions.getAllCsrs();
+    if (this.props.csrs.length == 0) {
+      this.props.actions.getAllCsrs();
+    }
   }
 
   render() {

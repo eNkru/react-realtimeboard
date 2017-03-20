@@ -8,7 +8,9 @@ import {Segment, Container, Header} from 'semantic-ui-react';
 class Agency extends React.Component {
 
   componentWillMount() {
-    this.props.actions.getAllAgencies();
+    if (this.props.agencies.length == 0) {
+      this.props.actions.getAllAgencies();
+    }
   }
 
   render() {
