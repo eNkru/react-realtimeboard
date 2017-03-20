@@ -1,5 +1,6 @@
 export default {
   agencies: [],
   csrs: [],
-  boards: []
+  boards: [],
+  numberAjaxCallsInProgress: 0
 };

@@ -7,7 +7,7 @@ import {Segment, Container, Header} from 'semantic-ui-react';
 
 class CustomerService extends Component {
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.actions.getAllCsrs();
   }
 

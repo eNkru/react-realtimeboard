@@ -7,7 +7,7 @@ import {Segment, Container, Header} from 'semantic-ui-react';
 
 class Agency extends React.Component {
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.actions.getAllAgencies();
   }
 
