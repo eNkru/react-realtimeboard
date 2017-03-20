@@ -42,7 +42,7 @@ const CSRPanel = ({csr}) => {
               defaultCenter={{lat: csr.latitude, lng: csr.longitude}}
               defaultZoom={16}
               style={{height: '300px'}}>
-              <Icon loading size="big" name="info circle" lat={csr.latitude} lng={csr.longitude}/>
+              <Icon size="big" name="info circle" lat={csr.latitude} lng={csr.longitude}/>
             </GoogleMapReact>
           </Grid.Column>
         </Grid.Row>
