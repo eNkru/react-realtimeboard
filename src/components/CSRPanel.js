@@ -6,7 +6,7 @@ const CSRPanel = ({csr}) => {
 
   return (
     <Segment color="blue">
-      {csr.hopServices && <Label as="a" color="orange" ribbon="right">HOP Available</Label>}
+      {csr.hopServices && <Label as="a" color="orange" ribbon>HOP Available</Label>}
       <Grid celled>
         <Grid.Row>
           <Grid.Column width={6}>
