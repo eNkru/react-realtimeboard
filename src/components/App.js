@@ -21,7 +21,7 @@ App.propTypes = {
 function mapStateToProps(state) {
   return {
     loading: state.numberAjaxCallsInProgress > 0
-  }
+  };
 }
 
 export default connect(mapStateToProps)(App);
