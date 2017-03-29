@@ -4,3 +4,4 @@ export const GET_ALL_CSRS_SUCCESS = "GET_ALL_CSRS_SUCCESS";
 export const BEGIN_AJAX_CALL = "BEGIN_AJAX_CALL";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGOUT = "LOGOUT";
+export const ROUTE_CHANGE = "ROUTE_CHANGE";

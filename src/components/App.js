@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <Header loading={this.props.loading} login={this.props.login}/>
+        <Header/>
         {this.props.children}
       </div>
     );
@@ -15,14 +15,6 @@ class App extends React.Component {
 
 App.propTypes = {
   children: PropTypes.object.isRequired,
-  loading: PropTypes.bool.isRequired
 };
 
-function mapStateToProps(state) {
-  return {
-    loading: state.numberAjaxCallsInProgress > 0,
-    login: state.login
-  };
-}
-
-export default connect(mapStateToProps)(App);
+export default App;

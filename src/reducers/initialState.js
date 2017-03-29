@@ -3,5 +3,6 @@ export default {
   csrs: [],
   boards: [],
   numberAjaxCallsInProgress: 0,
-  login: false
+  login: false,
+  location: '/'
 };
