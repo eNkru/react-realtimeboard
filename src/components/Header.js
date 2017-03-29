@@ -23,10 +23,12 @@ class Header extends React.Component {
         <Menu.Item as={Link} to="/" name="home" active={activeItem === 'home'} onClick={this.handleItemClick}/>
         <Menu.Item as={Link} to="/csr" name="csr" active={activeItem === 'csr'} onClick={this.handleItemClick}/>
         <Menu.Item as={Link} to="/agency" name="agency" active={activeItem === 'agency'} onClick={this.handleItemClick}/>
+        <Menu.Item as={Link} to="/about" name="about" active={activeItem === 'about'} onClick={this.handleItemClick}/>
         {loading && <Menu.Item><Icon loading name="spinner"/></Menu.Item>}
 
         <Menu.Menu position="right">
-          <Menu.Item as={Link} to="/about" name="about" active={activeItem === 'about'} onClick={this.handleItemClick}/>
+          <Menu.Item as={Link} to="/login" name="login" active={activeItem === 'login'} onClick={this.handleItemClick}/>
+          {/*<Menu.Item as={Link} to="#" name="logout" active={activeItem === 'home'} onClick={alert("Logged out!")}/>*/}
         </Menu.Menu>
       </Menu>
     );

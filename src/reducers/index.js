@@ -3,12 +3,14 @@ import boards from './boardReducer';
 import agencies from './agenciesReducer';
 import csrs from './csrReducer';
 import numberAjaxCallsInProgress from './ajaxStatusReducer';
+import login from './loginReducer';
 
 const rootReducer = combineReducers({
   boards,
   agencies,
   csrs,
-  numberAjaxCallsInProgress
+  numberAjaxCallsInProgress,
+  login
 });
 
 export default rootReducer;
