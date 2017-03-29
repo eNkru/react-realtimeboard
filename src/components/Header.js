@@ -1,6 +1,9 @@
 import React, {PropTypes} from 'react';
 import { Menu, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import * as loginActions from '../actions/loginActions';
 
 class Header extends React.Component {
 
@@ -8,15 +11,20 @@ class Header extends React.Component {
     super(props, context);
     this.state = {activeItem: 'home'};
     this.handleItemClick = this.handleItemClick.bind(this);
+    this.logout = this.logout.bind(this);
   }
 
   handleItemClick(event, {name}) {
     this.setState({activeItem: name});
   }
 
+  logout() {
+    this.props.actions.logout();
+  }
+
   render() {
     const {activeItem} = this.state;
-    const {loading} = this.props;
+    const {loading, login} = this.props;
 
     return (
       <Menu pointing secondary stackable>
@@ -27,8 +35,8 @@ class Header extends React.Component {
         {loading && <Menu.Item><Icon loading name="spinner"/></Menu.Item>}
 
         <Menu.Menu position="right">
-          <Menu.Item as={Link} to="/login" name="login" active={activeItem === 'login'} onClick={this.handleItemClick}/>
-          {/*<Menu.Item as={Link} to="#" name="logout" active={activeItem === 'home'} onClick={alert("Logged out!")}/>*/}
+          {!login && <Menu.Item as={Link} to="/login" name="login" active={activeItem === 'login'} onClick={this.handleItemClick}/> }
+          {login && <Menu.Item as={Link} to="/" name="logout" active={activeItem === 'home'} onClick={this.logout}/> }
         </Menu.Menu>
       </Menu>
     );
@@ -36,7 +44,15 @@ class Header extends React.Component {
 }
 
 Header.propTypes = {
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool.isRequired,
+  login: PropTypes.bool.isRequired,
+  actions: PropTypes.object.isRequired
 };
 
-export default Header;
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(loginActions, dispatch)
+  };
+}
+
+export default connect(null, mapDispatchToProps)(Header);

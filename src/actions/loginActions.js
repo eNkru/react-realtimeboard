@@ -7,6 +7,10 @@ export function loginSuccess(success) {
   return {type: types.LOGIN_SUCCESS, success};
 }
 
+export function logout() {
+  return {type: types.LOGOUT};
+}
+
 export function login(username, password) {
   return function (dispatch) {
     dispatch(beginAjaxCall());
@@ -20,6 +24,5 @@ export function login(username, password) {
 }
 
 function forwardTo(location) {
-  // console.log("forwardTo(" + location + ")");
   browserHistory.push(location);
 }
