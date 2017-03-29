@@ -20,6 +20,6 @@ export function login(username, password) {
 }
 
 function forwardTo(location) {
-  console.log("forwardTo(" + location + ")");
+  // console.log("forwardTo(" + location + ")");
   browserHistory.push(location);
 }

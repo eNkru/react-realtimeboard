@@ -3,7 +3,7 @@ import initialState from "./initialState";
 
 export default function (state = initialState.login, action) {
   if (action.type == types.LOGIN_SUCCESS) {
-    console.log(action.type, action.success);
+    // console.log(action.type, action.success);
     return action.success;
   }
 
